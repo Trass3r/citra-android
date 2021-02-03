@@ -116,8 +116,11 @@ void Config::ReadValues() {
     Settings::values.use_gles = sdl2_config->GetBoolean("Renderer", "use_gles", true);
     Settings::values.use_hw_renderer = sdl2_config->GetBoolean("Renderer", "use_hw_renderer", true);
     Settings::values.use_hw_shader = sdl2_config->GetBoolean("Renderer", "use_hw_shader", true);
+    Settings::values.separable_shader = sdl2_config->GetBoolean("Renderer", "separable_shader", false);
     Settings::values.shaders_accurate_mul =
         sdl2_config->GetBoolean("Renderer", "shaders_accurate_mul", false);
+    Settings::values.use_disk_shader_cache =
+        sdl2_config->GetBoolean("Renderer", "use_disk_shader_cache", false);
     Settings::values.use_asynchronous_gpu_emulation =
         sdl2_config->GetBoolean("Renderer", "use_asynchronous_gpu_emulation", true);
     Settings::values.use_shader_jit = sdl2_config->GetBoolean("Renderer", "use_shader_jit", true);
